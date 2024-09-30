@@ -12,7 +12,7 @@ module load roslin/bwa/0.7.16a
 module load java
 module load roslin/samtools/1.10
 
-
+input=Z_capensis_rename.fa
 read1=171103_E00397_0080_BH3W23CCXY_1_TP-D7-011_1.fastq.gz
 read2=171103_E00397_0080_BH3W23CCXY_1_TP-D7-011_2.fastq.gz
 read3=171103_E00397_0080_BH3W23CCXY_2_TP-D7-011_1.fastq.gz
@@ -20,7 +20,6 @@ read4=171103_E00397_0080_BH3W23CCXY_2_TP-D7-011_2.fastq.gz
 threads=$NSLOTS
 mkdir -p Z_Pilon
 
-input=Z_capensis_rename.fa
 # Index fasta
 bwa index ${input}
 samtools faidx ${input}
