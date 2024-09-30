@@ -15,8 +15,8 @@ source activate py37
 module load roslin/bwa/0.7.18
 
 #export TMPDIR=/tmp/
-export PATH="$PATH:/exports/cmvm/eddie/eb/groups/smith_grp/Zhou_wu/Install/htslib/htslib-1.20/bin/"
-export PATH="$PATH:/exports/cmvm/eddie/eb/groups/smith_grp/Zhou_wu/Install/samtools-1.2/samtools-1.20/bin/"
+export PATH="$PATH:./Install/htslib/htslib-1.20/bin/"
+export PATH="$PATH:./Install/samtools-1.2/samtools-1.20/bin/"
 
 #bwa index draft.fasta
 input=Z_capensis_rename.fa
