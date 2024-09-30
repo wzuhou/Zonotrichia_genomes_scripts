@@ -117,7 +117,6 @@ p2<-ggplot(repeat_sum,aes(x=log(end), y=Rep,color = factor(chr,level=MyOrder),la
   scale_color_manual(values=wes_palette("GrandBudapest1", 35, type = "continuous"))+
   annotate("text", x = 18, y =25, label ="Z. Capensis",color='black',size=5,fontface =3)+
   scale_y_continuous(expand = c(0,1))+
-  #geom_smooth(method = lm, se = FALSE)+
   geom_smooth(color = alpha('gray30',0.3), size=0.8, method = lm, se = FALSE, fullrange = TRUE,linetype ='dashed') + 
   geom_point()+
   geom_text_repel(nudge_y = -0.08, max.overlaps = Inf,size=5) + #this is to label the point
@@ -249,13 +248,10 @@ p4<-ggplot(GD1,aes(x=log(Size), y=Gene_dens,color = factor(Chromosome,level=MyOr
   ylab('Gene density (100Kb window)')+
   #labs(title = "Chr gene number",)+
   annotate("text", x = 16.2, y = 1, label = "P< 2.2x10^-16\nrho=-0.97",color='black')+
-  #geom_smooth(method = lm, se = FALSE)+
   scale_color_manual(values=wes_palette("GrandBudapest1", 35, type = "continuous"))+
-  #labs(title = "Chr gene number",)+
   annotate("text", x = 18, y =4, label ="Z. Capensis",color='black',size=5,fontface =3)+
   scale_y_continuous(expand = c(0,0.1))+
-  #geom_smooth(method = lm, se = FALSE)+
-  geom_smooth(color = alpha('gray30',0.3), size=0.8, method = lm, se = FALSE, fullrange = TRUE,linetype ='dashed') + 
+   geom_smooth(color = alpha('gray30',0.3), size=0.8, method = lm, se = FALSE, fullrange = TRUE,linetype ='dashed') + 
   geom_point()+
   geom_text_repel(nudge_y = -0.08, max.overlaps = Inf,size=5) + #this is to label the point
   theme_classic()+
